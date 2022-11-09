@@ -6,12 +6,11 @@ class Maison:
     def __init__(self) -> None:
         self.board = Board()
 
-        
         #Pieces
-        self.salon = Salon(self.board)
+        self.salon = Salon(self.board, pinLumiere=5)
 
         #Objets connectes sans pieces
-        self.porteEntre = PorteEntre(self.board, 5, 3, 6)
+        self.porteEntre = PorteEntre(self.board, pinMoteur=7, pinPiezo=3, pinButton=6)
 
 
 

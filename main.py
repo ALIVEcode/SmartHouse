@@ -16,10 +16,10 @@ def setup():
 
 def loop():
     maison.salon.lumiere.allumer()
-    print("on")
-    sleep(2)
+    print("Lumiere salon allumée")
+    sleep(5)
     maison.salon.lumiere.eteindre()
-    print("off")
+    print("Lumiere salon Eteinte")
     sleep(1)
 
 
