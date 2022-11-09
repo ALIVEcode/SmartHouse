@@ -7,12 +7,12 @@ maison = Maison()
 # Fonctions de retour (callback)
 def appuieSonnette():
     print("Sonnette appuyée")
-    maison.porteEntre.sonnette.ding()
+    maison.porte_entre.sonnette.ding()
 
 
 
 def setup():
-    maison.porteEntre.sonnette.surClic(appuieSonnette)
+    maison.porte_entre.sonnette.sur_clic(appuieSonnette)
 
 def loop():
     maison.salon.lumiere.allumer()

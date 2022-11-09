@@ -7,28 +7,26 @@ from alimata.sensors.button import Button
 
 
 class Sonnette:
-    def __init__(self, board: Board, pinPiezo: int, pinButton: int) -> None:
-        self.__piezo = Piezo(board, pinPiezo)
-        self.button = Button(board, pinButton, invert=True)
+    def __init__(self, board: Board, pin_piezo: int, pin_button: int) -> None:
+        self.__piezo = Piezo(board, pin_piezo)
+        self.button = Button(board, pin_button, invert=True, on_change=self.__pressed)
         self.__callback = None
     
 
     def ding(self) -> None:
         print("Ding")
-        Thread(target=self.__sonnetteThread).start()
+        Thread(target=self.__sonnette_thread).start()
 
 
-    def surClic(self, fonction) -> None:
+    def sur_clic(self, fonction) -> None:
         self.__callback = fonction
-        self.button.on_change(self.__pressed)
 
     def __pressed(self, btn) -> None:
-        if self.__callback is not None:
-            if btn.data:
-                self.__callback()
+        if self.__callback is not None and btn.data:
+            self.__callback()
         
     
-    def __sonnetteThread(self) -> None:
+    def __sonnette_thread(self) -> None:
         self.__piezo.playTone(1100)
         sleep(0.4)
         self.__piezo.playTone(550, 250)

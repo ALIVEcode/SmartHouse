@@ -8,8 +8,8 @@ from maison.objetsConnecte.lumiere import Lumiere
 
 class Salon(Piece):
 
-    def __init__(self, board: Board, pinLumiere: int) -> None:
+    def __init__(self, board: Board, pin_lumiere: int) -> None:
         super().__init__()
-        self.lumiere = Lumiere(board, pinLumiere)
+        self.lumiere = Lumiere(board, pin_lumiere)
 
     
