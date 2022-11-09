@@ -1,0 +1,40 @@
+{
+    "salon": {
+        "pins": {
+            "lumiere": "3",
+            "detecteur_mouvement": "4"
+        }
+    },
+    "salle_de_bain": {
+        "pins": {
+            "lumiere": "5",
+            "detecteur_mouvement": "6",
+            "capteur_dht": "7"
+        }
+    },
+    "cuisine": {
+        "pins": {
+            "lumiere": "8",
+            "detecteur_mouvement": "9",
+            "red": "10",
+            "green": "11",
+            "blue": "12"
+        }
+    },
+    "porte_entre": {
+        "pins": {
+            "moteur": "99"
+        }
+    },
+    "sonnette_entre": { 
+        "pins": {
+            "piezo": "13",
+            "button": "14"
+        }
+    },
+    "alarme": {
+        "pins": {
+            "piezo": "13"
+        }
+    }
+}

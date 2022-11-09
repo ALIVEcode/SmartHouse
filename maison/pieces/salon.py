@@ -1,15 +1,11 @@
 from alimata.core.board import Board
 
 from maison.pieces.piece import Piece
-from maison.objetsConnecte.lumiere import Lumiere
-
-
 
 
 class Salon(Piece):
 
-    def __init__(self, board: Board, pin_lumiere: int) -> None:
-        super().__init__()
-        self.lumiere = Lumiere(board, pin_lumiere)
+    def __init__(self, board: Board, pin_lumiere: str, pin_detecteur_mouvement: str) -> None:
+        super().__init__(board= board, pin_detecteur_mouvement= pin_detecteur_mouvement, pin_lumiere=pin_lumiere)
 
     
