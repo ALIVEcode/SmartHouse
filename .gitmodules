@@ -1,0 +1,3 @@
+[submodule "alimataSubmodule"]
+	path = alimataSubmodule
+	url = https://github.com/ALIVEcode/alimata.git
