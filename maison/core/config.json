@@ -1,40 +1,52 @@
 {
     "salon": {
-        "pins": {
-            "lumiere": "3",
-            "detecteur_mouvement": "4"
+        "lumiere": {
+            "pin": "3"
+        },
+        "detecteur_mouvement": {
+            "pin": "4"
         }
     },
     "salle_de_bain": {
-        "pins": {
-            "lumiere": "5",
-            "detecteur_mouvement": "6",
-            "capteur_dht": "7"
+        "lumiere": {
+            "pin": "5"
+        },
+        "detecteur_mouvement": {
+            "pin": "6"
+        },
+        "capteur_dht": {
+            "pin": "7"
         }
     },
     "cuisine": {
-        "pins": {
-            "lumiere": "8",
-            "detecteur_mouvement": "9",
-            "red": "10",
-            "green": "11",
-            "blue": "12"
+        "lumiere": {
+            "pin": "8"
+        },
+        "detecteur_mouvement": {
+            "pin": "9"
+        },
+        "lave_vaisselle": {
+            "red_pin": "10",
+            "green_pin": "11",
+            "blue_pin": "11"
         }
     },
     "porte_entre": {
-        "pins": {
-            "moteur": "99"
+        "moteur": {
+            "pin": "99"
         }
     },
     "sonnette_entre": { 
-        "pins": {
-            "piezo": "13",
-            "button": "14"
+        "piezo": {
+            "pin": "8"
+        },
+        "button": {
+            "pin": "9"
         }
     },
     "alarme": {
-        "pins": {
-            "piezo": "13"
+        "piezo": {
+            "pin": "8"
         }
     }
 }

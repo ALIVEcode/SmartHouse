@@ -21,33 +21,34 @@ class Maison:
 
         #Pieces
         self.salon = Salon(self.board, 
-            pin_lumiere=config["salon"]["pins"]["lumiere"], 
-            pin_detecteur_mouvement=config["salon"]["pins"]["detecteur_mouvement"])
+            pin_lumiere=config["salon"]["lumiere"]["pin"], 
+            pin_detecteur_mouvement=config["salon"]["detecteur_mouvement"]["pin"])
         
         self.cuisine = Cuisine(self.board,
-            pin_lumiere=config["cuisine"]["pins"]["lumiere"],
-            pin_detecteur_mouvement=config["cuisine"]["pins"]["detecteur_mouvement"],
-            pin_red=config["cuisine"]["pins"]["red"],
-            pin_green=config["cuisine"]["pins"]["green"],
-            pin_blue=config["cuisine"]["pins"]["blue"])
+            pin_lumiere=config["cuisine"]["lumiere"]["pin"],
+            pin_detecteur_mouvement=config["cuisine"]["detecteur_mouvement"]["pin"],
+            pin_red=config["cuisine"]["lave_vaisselle"]["red_pin"],
+            pin_green=config["cuisine"]["lave_vaisselle"]["green_pin"],
+            pin_blue=config["cuisine"]["lave_vaisselle"]["blue_pin"])
 
 
         self.salle_de_bain = SalleDeBain(self.board, 
-            pin_lumiere=config["salle_de_bain"]["pins"]["lumiere"], 
-            pin_detecteur_mouvement=config["salle_de_bain"]["pins"]["detecteur_mouvement"], 
-            pin_capteur_dht=config["salle_de_bain"]["pins"]["capteur_dht"])
+            pin_lumiere=config["salle_de_bain"]["lumiere"]["pin"], 
+            pin_detecteur_mouvement=config["salle_de_bain"]["detecteur_mouvement"]["pin"], 
+            pin_capteur_dht=config["salle_de_bain"]["capteur_dht"]["pin"])
 
 
         #Objets connectes sans pieces
         self.porte_entre = Porte_entre(self.board, 
-            pin_moteur=config["porte_entre"]["pins"]["moteur"])
+            pin_moteur=config["porte_entre"]["moteur"]["pin"])
+
         
         self.alarme = Alarme(self.board, 
-            pin_piezo=config["alarme"]["pins"]["piezo"])
+            pin_piezo=config["alarme"]["piezo"]["pin"])
 
         self.sonnette_entre = SonnetteEntre(self.board,
-            pin_piezo=config["sonnette_entre"]["pins"]["piezo"], 
-            pin_button=config["sonnette_entre"]["pins"]["button"])
+            pin_piezo=config["alarme"]["piezo"]["pin"], 
+            pin_button=config["sonnette_entre"]["button"]["pin"])
 
 
     def start(self, setup_func, loop_func):
