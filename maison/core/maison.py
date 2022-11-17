@@ -19,7 +19,7 @@ class Maison:
         # Initialize board
         self.board = Board()
 
-        #Pieces
+        # Pieces
         self.salon = Salon(self.board, 
             pin_lumiere=config["salon"]["lumiere"]["pin"], 
             pin_detecteur_mouvement=config["salon"]["detecteur_mouvement"]["pin"])
@@ -38,7 +38,7 @@ class Maison:
             pin_capteur_dht=config["salle_de_bain"]["capteur_dht"]["pin"])
 
 
-        #Objets connectes sans pieces
+        # Objets connectes sans pieces
         self.porte_entre = Porte_entre(self.board, 
             pin_moteur=config["porte_entre"]["moteur"]["pin"])
 
