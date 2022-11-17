@@ -13,6 +13,11 @@ def mouvement_salle_de_bain(etat):
     else:
         maison.salle_de_bain.lumiere.eteindre()
 
+def sonner_sonnette(etat):
+    if etat:
+        print("sonner")
+        maison.sonnette_entre.sonner()
+
 # def mouvement_salon():
 #     pass
 #     print("mouvement salon")
@@ -24,6 +29,7 @@ def mouvement_salle_de_bain(etat):
 def setup():
 
     maison.salle_de_bain.sur_mouvement(mouvement_salle_de_bain)
+    maison.sonnette_entre.sur_clic(sonner_sonnette)
     # maison.salon.sur_mouvement(mouvement_salon)
     # maison.cuisine.sur_mouvement(mouvement_cuisine)
     
@@ -36,6 +42,7 @@ def loop():
         maison.son.sonner()
     else:
         maison.son.stop()
+        
     sleep(1)
 
 

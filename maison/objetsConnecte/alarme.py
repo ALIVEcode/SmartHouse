@@ -15,7 +15,6 @@ class Son:
             
     def stop(self) -> None:
         self.__currentAlarmOn = False
-        self.__piezo.stopTone()
 
 
     def __alarmeThread(self) -> None:

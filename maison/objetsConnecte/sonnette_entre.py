@@ -23,7 +23,7 @@ class SonnetteEntre:
 
     def __pressed(self, btn : Button) -> None:
         if self.__callback is not None and btn.data:
-            self.__callback()
+            self.__callback(btn.data)
         
     
     def __sonnette_thread(self) -> None:
