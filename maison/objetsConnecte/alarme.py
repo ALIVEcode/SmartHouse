@@ -3,7 +3,7 @@ from alimata.core.board import Board
 from alimata.actuators.piezo import Piezo
 from time import sleep
 
-class Alarme:
+class Son:
     def __init__(self, board: Board, pin_piezo: int) -> None:
         self.__piezo = Piezo(board, pin_piezo)
         self.__currentAlarmOn = False

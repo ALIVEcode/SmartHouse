@@ -4,7 +4,7 @@
             "pin": "31"
         },
         "detecteur_mouvement": {
-            "pin": "23"
+            "pin": "22"
         }
     },
     "salle_de_bain": {
@@ -12,7 +12,7 @@
             "pin": "30"
         },
         "detecteur_mouvement": {
-            "pin": "22"
+            "pin": "23"
         },
         "capteur_dht": {
             "pin": "24"
@@ -27,7 +27,7 @@
         },
         "lave_vaisselle": {
             "red_pin": "33",
-            "green_pin": "34",
+            "green_pin": "36",
             "blue_pin": "35"
         }
     },
@@ -38,7 +38,7 @@
     },
     "sonnette_entre": { 
         "piezo": {
-            "pin": "37"
+            "pin": "39"
         },
         "button": {
             "pin": "38"

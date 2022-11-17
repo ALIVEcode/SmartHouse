@@ -7,9 +7,9 @@ class CapteurDHT:
         self.__dht = DHT(board, pin_dht, 11)
 
     @property
-    def temperature(self) -> None:
-        self.__dht.temperature
+    def temperature(self) -> int:
+        return int(self.__dht.temperature)
 
     @property
-    def humidite(self) -> None:
-        self.__dht.humidity
+    def humidite(self) -> int:
+        return int(self.__dht.humidity)
