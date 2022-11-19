@@ -1,4 +1,4 @@
 [submodule "alimataSubmodule"]
-	path = alimatzaSubmodule
+	path = alimataSubmodule
 	url = https://github.com/ALIVEcode/alimata.git
 	branch = firmetix
