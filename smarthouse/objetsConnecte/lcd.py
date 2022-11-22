@@ -9,7 +9,7 @@ class LCD:
 
     def afficher(self, ligne1: str, ligne2: str = ""):
         '''Quickly prints 1 to 2 lines on the LCD'''
-        self.home()
-        self.print(ligne1)
-        self.set_cursor(0, 1)
-        self.print(ligne2)
+        self.__lcd.home()
+        self.__lcd.print(ligne1)
+        self.__lcd.set_cursor(0, 1)
+        self.__lcd.print(ligne2)
