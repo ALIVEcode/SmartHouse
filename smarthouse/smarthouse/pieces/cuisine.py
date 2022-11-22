@@ -1,9 +1,9 @@
 from alimata.core.board import Board
 
 
-from maison.pieces.piece import Piece
+from smarthouse.pieces.piece import Piece
 
-from maison.objetsConnecte.lave_vaisselle import LaveVaisselle
+from smarthouse.objetsConnecte.lave_vaisselle import LaveVaisselle
 
 
 

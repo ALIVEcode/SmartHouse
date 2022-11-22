@@ -1,22 +1,22 @@
 import json
 from alimata.core.board import Board
 
-from maison.pieces.salon import Salon
-from maison.pieces.salle_de_bain import SalleDeBain
-from maison.pieces.cuisine import Cuisine
-from maison.pieces.chambre import Chambre
+from smarthouse.pieces.salon import Salon
+from smarthouse.pieces.salle_de_bain import SalleDeBain
+from smarthouse.pieces.cuisine import Cuisine
+from smarthouse.pieces.chambre import Chambre
 
-from maison.objetsConnecte.porte_entre import Porte_entre
-from maison.objetsConnecte.sonnette_entre import SonnetteEntre
-from maison.objetsConnecte.alarme import Son
-from maison.objetsConnecte.lcd import LCD
+from smarthouse.objetsConnecte.porte_entre import Porte_entre
+from smarthouse.objetsConnecte.sonnette_entre import SonnetteEntre
+from smarthouse.objetsConnecte.alarme import Son
+from smarthouse.objetsConnecte.lcd import LCD
 
 from time import sleep
 
 class Maison:
     def __init__(self) -> None:
         # Load config
-        with open("maison/core/config.json", "r") as f:
+        with open("smarthouse/core/config.json", "r") as f:
             config = json.load(f)
 
         # Initialize board

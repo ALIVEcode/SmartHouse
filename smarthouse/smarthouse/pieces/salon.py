@@ -1,6 +1,6 @@
 from alimata.core.board import Board
 
-from maison.pieces.piece import Piece
+from smarthouse.pieces.piece import Piece
 
 
 class Salon(Piece):

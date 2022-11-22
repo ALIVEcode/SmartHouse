@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 from alimata.core.board import Board
 
-from maison.objetsConnecte.lumiere import Lumiere
+from smarthouse.objetsConnecte.lumiere import Lumiere
 from alimata.sensors.motion import Motion
 
 from time import sleep
