@@ -1,5 +1,5 @@
 from time import sleep
-from maison.core.maison import Maison
+from smarthouse.core.maison import Maison
 from alimata.sensors.motion import Motion
 
 maison = Maison()
@@ -35,11 +35,11 @@ def mouvement_chambre(etat):
 def sonner_sonnette(etat):
     if etat:
         print("sonner")
-        maison.porte_entre.ouvrir()
+        maison.porte_entree.ouvrir()
         maison.sonnette_entre.sonner()
 
     else:
-        maison.porte_entre.fermer()
+        maison.porte_entree.fermer()
 
 def setup():
 
@@ -55,9 +55,8 @@ def loop():
     print("Temp : " + str(maison.salle_de_bain.capteur_dht.temperature))
     maison.lcd.afficher(
         "Humidite : " + str(maison.salle_de_bain.capteur_dht.humidite), 
-        "Temperature : " + str(maison.salle_de_bain.capteur_dht.temperature),
-        "",
-        "")
+        "Temperature : " + str(maison.salle_de_bain.capteur_dht.temperature)
+    )
 
     if maison.salle_de_bain.capteur_dht.humidite >= 50:
         maison.son.sonner()

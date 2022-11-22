@@ -6,7 +6,7 @@ from smarthouse.pieces.salle_de_bain import SalleDeBain
 from smarthouse.pieces.cuisine import Cuisine
 from smarthouse.pieces.chambre import Chambre
 
-from smarthouse.objetsConnecte.porte_entre import Porte_entre
+from smarthouse.objetsConnecte.porte_entree import PorteEntree
 from smarthouse.objetsConnecte.sonnette_entre import SonnetteEntre
 from smarthouse.objetsConnecte.alarme import Son
 from smarthouse.objetsConnecte.lcd import LCD
@@ -51,8 +51,8 @@ class Maison:
 
         sleep(0.3)
         # Objets connectes sans pieces
-        self.porte_entre = Porte_entre(self.board, 
-            pin_servo=config["porte_entre"]["servo"]["pin"])
+        self.porte_entree = PorteEntree(self.board, 
+            pin_servo=config["porte_entree"]["servo"]["pin"])
 
         sleep(0.3)
         self.son = Son(self.board, 

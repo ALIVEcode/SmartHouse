@@ -6,7 +6,7 @@ from alimata.actuators.piezo import Piezo
 from alimata.sensors.button import Button
 
 
-class SonnetteEntre:
+class SonnetteEntree:
     def __init__(self, board: Board, pin_piezo: int, pin_button: int) -> None:
         self.__piezo = Piezo(board, pin_piezo)
         self.button = Button(board, pin_button, invert=True, on_change=self.__pressed)
