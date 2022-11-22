@@ -16,7 +16,7 @@ from time import sleep
 class Maison:
     def __init__(self) -> None:
         # Load config
-        with open("smarthouse/core/config.json", "r") as f:
+        with open("smarthouse/smarthouse/core/config.json", "r") as f:
             config = json.load(f)
 
         # Initialize board
