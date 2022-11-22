@@ -31,7 +31,7 @@
   },
   "cuisine": {
     "lumiere": {
-      "pin": "32"
+      "pin": "40"
     },
     "detecteur_mouvement": {
       "pin": "25"
