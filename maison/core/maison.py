@@ -4,10 +4,12 @@ from alimata.core.board import Board
 from maison.pieces.salon import Salon
 from maison.pieces.salle_de_bain import SalleDeBain
 from maison.pieces.cuisine import Cuisine
+from maison.pieces.chambre import Chambre
 
 from maison.objetsConnecte.porte_entre import Porte_entre
 from maison.objetsConnecte.sonnette_entre import SonnetteEntre
 from maison.objetsConnecte.alarme import Son
+from maison.objetsConnecte.lcd import LCD
 
 from time import sleep
 
@@ -40,11 +42,16 @@ class Maison:
             pin_detecteur_mouvement=config["salle_de_bain"]["detecteur_mouvement"]["pin"], 
             pin_capteur_dht=config["salle_de_bain"]["capteur_dht"]["pin"])
 
+        sleep(0.3)
+        self.chambre = Chambre(self.board,
+            pin_lumiere=config["chambre"]["lumiere"]["pin"],
+            pin_detecteur_mouvement=config["chambre"]["detecteur_mouvement"]["pin"],
+            pin_capteur_dht=config["chambre"]["capteur_dht"]["pin"])
 
         sleep(0.3)
         # Objets connectes sans pieces
         self.porte_entre = Porte_entre(self.board, 
-            pin_moteur=config["porte_entre"]["moteur"]["pin"])
+            pin_servo=config["porte_entre"]["servo"]["pin"])
 
         sleep(0.3)
         self.son = Son(self.board, 
@@ -55,6 +62,8 @@ class Maison:
             pin_piezo=config["alarme"]["piezo"]["pin"], 
             pin_button=config["sonnette_entre"]["button"]["pin"])
 
+        sleep(0.3)
+        self.lcd = LCD(self.board)
 
     def start(self, setup_func, loop_func):
         self.board.start(setup_func, loop_func)

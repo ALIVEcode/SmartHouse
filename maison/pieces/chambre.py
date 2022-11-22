@@ -5,7 +5,7 @@ from maison.objetsConnecte.capteur_dht import CapteurDHT
 
 
 
-class SalleDeBain(Piece):
+class Chambre(Piece):
 
     def __init__(self, board: Board, pin_lumiere: str, pin_detecteur_mouvement: str, pin_capteur_dht: str) -> None:
         super().__init__(board= board, pin_detecteur_mouvement=pin_detecteur_mouvement, pin_lumiere=pin_lumiere)

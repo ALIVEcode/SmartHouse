@@ -1,21 +1,32 @@
 {
     "salon": {
         "lumiere": {
-            "pin": "31"
+            "pin": "25"
         },
         "detecteur_mouvement": {
-            "pin": "22"
+            "pin": "24"
         }
     },
     "salle_de_bain": {
         "lumiere": {
-            "pin": "30"
+            "pin": "53"
         },
         "detecteur_mouvement": {
-            "pin": "23"
+            "pin": "50"
         },
         "capteur_dht": {
-            "pin": "24"
+            "pin": "51"
+        }
+    },
+    "chambre": {
+        "lumiere": {
+            "pin": "46"
+        },
+        "detecteur_mouvement": {
+            "pin": "45"
+        },
+        "capteur_dht": {
+            "pin": "47"
         }
     },
     "cuisine": {
@@ -32,21 +43,21 @@
         }
     },
     "porte_entre": {
-        "moteur": {
-            "pin": "99"
+        "servo": {
+            "pin": "49"
         }
     },
     "sonnette_entre": { 
         "piezo": {
-            "pin": "39"
+            "pin": "23"
         },
         "button": {
-            "pin": "38"
+            "pin": "22"
         }
     },
     "alarme": {
         "piezo": {
-            "pin": "39"
+            "pin": "23"
         }
     }
 }
