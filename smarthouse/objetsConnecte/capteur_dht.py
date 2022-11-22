@@ -1,15 +1,22 @@
 from alimata.sensors.dht import DHT
 from alimata.core.board import Board
+from alimata.core.core import DHT_TYPE
 
 
 class CapteurDHT:
     def __init__(self, board: Board, pin_dht: str) -> None:
-        self.__dht = DHT(board, pin_dht, 11)
+        self.__dht = DHT(board, pin_dht, DHT_TYPE.DHT11)
 
     @property
-    def temperature(self) -> int:
-        return int(self.__dht.temperature)
+    def temperature(self) -> float:
+        return float(self.__dht.temperature)
 
     @property
-    def humidite(self) -> int:
-        return int(self.__dht.humidity)
+    def humidite(self) -> float:
+        return float(self.__dht.humidity)
+    
+    def to_dict(self):
+        return {
+            "humidite": self.humidite,
+            "temperature": self.temperature
+        }

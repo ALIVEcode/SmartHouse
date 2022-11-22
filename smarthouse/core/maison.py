@@ -13,6 +13,7 @@ from smarthouse.objetsConnecte.lcd import LCD
 
 from time import sleep
 
+
 class Maison:
     def __init__(self) -> None:
         # Load config
@@ -67,11 +68,27 @@ class Maison:
 
     def start(self, setup_func, loop_func):
         self.board.start(setup_func, loop_func)
-        
 
-
-
-
-
+    def to_dict(self):
+        return {
+            "chambre": self.chambre.to_dict(),
+            "salle_de_bain": self.salle_de_bain.to_dict(),
+            "cuisine": self.cuisine.to_dict(),
+            "salon": self.salon.to_dict(),
+        }
     
+    def as_doc(self, document_name="document"):
+        doc = {}
+        data = self.to_dict()
+
+        def recursive_as_doc(data: dict, current_prefix: str):
+            for key, value in data.items():
+                if isinstance(value, dict):
+                    doc[f"{current_prefix}/{key}"] = {}
+                    recursive_as_doc(value, f"{current_prefix}/{key}")
+                else:
+                    doc[f"{current_prefix}/{key}"] = value
+
+        recursive_as_doc(data, f"/{document_name}")
+        return doc
     

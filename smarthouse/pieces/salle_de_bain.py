@@ -11,3 +11,8 @@ class SalleDeBain(Piece):
         super().__init__(board= board, pin_detecteur_mouvement=pin_detecteur_mouvement, pin_lumiere=pin_lumiere)
 
         self.capteur_dht = CapteurDHT(board, pin_capteur_dht)
+    
+    def to_dict(self):
+        return { 
+            "dht": self.capteur_dht.to_dict()
+        }
