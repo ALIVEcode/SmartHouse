@@ -53,10 +53,10 @@ def setup():
 def loop():
     print("Hum : " + str(maison.salle_de_bain.capteur_dht.humidite))
     print("Temp : " + str(maison.salle_de_bain.capteur_dht.temperature))
-    maison.lcd.afficher(
-        "Humidite : " + str(maison.salle_de_bain.capteur_dht.humidite), 
-        "Temperature : " + str(maison.salle_de_bain.capteur_dht.temperature)
-    )
+    #maison.lcd.afficher(
+    #    "Humidite : " + str(maison.salle_de_bain.capteur_dht.humidite), 
+    #    "Temperature : " + str(maison.salle_de_bain.capteur_dht.temperature)
+    #)
 
     if maison.salle_de_bain.capteur_dht.humidite >= 50:
         maison.son.sonner()

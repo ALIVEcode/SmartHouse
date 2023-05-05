@@ -27,6 +27,6 @@ class SonnetteEntree:
         
     
     def __sonnette_thread(self) -> None:
-        self.__piezo.playTone(1100)
+        self.__piezo.play_tone(1100)
         sleep(0.4)
-        self.__piezo.playTone(550, 250)
+        self.__piezo.play_tone(550, 250)

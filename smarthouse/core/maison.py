@@ -7,7 +7,7 @@ from smarthouse.pieces.cuisine import Cuisine
 from smarthouse.pieces.chambre import Chambre
 
 from smarthouse.objetsConnecte.porte_entree import PorteEntree
-from smarthouse.objetsConnecte.sonnette_entre import SonnetteEntre
+from smarthouse.objetsConnecte.sonnette_entree import SonnetteEntree
 from smarthouse.objetsConnecte.alarme import Son
 from smarthouse.objetsConnecte.lcd import LCD
 
@@ -59,9 +59,9 @@ class Maison:
             pin_piezo=config["alarme"]["piezo"]["pin"])
 
         sleep(0.3)
-        self.sonnette_entre = SonnetteEntre(self.board,
+        self.sonnette_entre = SonnetteEntree(self.board,
             pin_piezo=config["alarme"]["piezo"]["pin"], 
-            pin_button=config["sonnette_entre"]["button"]["pin"])
+            pin_button=config["sonnette_entree"]["button"]["pin"])
 
         sleep(0.3)
         self.lcd = LCD(self.board)

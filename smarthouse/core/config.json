@@ -1,63 +1,63 @@
 {
-  "salon": {
-    "lumiere": {
-      "pin": "25"
-    },
-    "detecteur_mouvement": {
-      "pin": "24"
-    }
-  },
-  "salle_de_bain": {
-    "lumiere": {
-      "pin": "53"
-    },
-    "detecteur_mouvement": {
-      "pin": "50"
-    },
-    "capteur_dht": {
-      "pin": "51"
-    }
-  },
-  "chambre": {
-    "lumiere": {
-      "pin": "46"
-    },
-    "detecteur_mouvement": {
-      "pin": "45"
-    },
-    "capteur_dht": {
-      "pin": "47"
-    }
-  },
-  "cuisine": {
-    "lumiere": {
-      "pin": "40"
-    },
-    "detecteur_mouvement": {
-      "pin": "25"
-    },
-    "lave_vaisselle": {
-      "red_pin": "33",
-      "green_pin": "36",
-      "blue_pin": "35"
-    }
-  },
-  "porte_entree": {
-    "servo": {
-      "pin": "49"
-    }
-  },
-  "sonnette_entre": {
-    "piezo": {
-      "pin": "23"
-    },
-    "button": {
-      "pin": "22"
-    }
-  },
-  "alarme": {
-    "piezo": {
-      "pin": "23"
-    }
-  }
+	"salon": {
+		"lumiere": {
+			"pin": "25"
+		},
+		"detecteur_mouvement": {
+			"pin": "24"
+		}
+	},
+	"salle_de_bain": {
+		"lumiere": {
+			"pin": "53"
+		},
+		"detecteur_mouvement": {
+			"pin": "50"
+		},
+		"capteur_dht": {
+			"pin": "32"
+		}
+	},
+	"chambre": {
+		"lumiere": {
+			"pin": "46"
+		},
+		"detecteur_mouvement": {
+			"pin": "45"
+		},
+		"capteur_dht": {
+			"pin": "32"
+		}
+	},
+	"cuisine": {
+		"lumiere": {
+			"pin": "40"
+		},
+		"detecteur_mouvement": {
+			"pin": "25"
+		},
+		"lave_vaisselle": {
+			"red_pin": "51",
+			"green_pin": "51",
+			"blue_pin": "51"
+		}
+	},
+	"porte_entree": {
+		"servo": {
+			"pin": "49"
+		}
+	},
+	"sonnette_entree": {
+		"piezo": {
+			"pin": "23"
+		},
+		"button": {
+			"pin": "36"
+		}
+	},
+	"alarme": {
+		"piezo": {
+			"pin": "23"
+		}
+	}
 }
